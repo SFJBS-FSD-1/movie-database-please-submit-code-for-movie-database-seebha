@@ -12,7 +12,7 @@ class Development_Config(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://root:1234@localhost/moviedatabase'
 
 class Production_Config(Config):
-    uri=os.environ.get("HEROKU_POSTGRESQL_ONYX_URL")
+    uri=os.environ.get("DATABASE_URL")
     if uri and uri.startswith("postgres://"):
         uri=uri.replace("postgres://","postgresql://",1)
     SQLALCHEMY_DATABASE_URI = uri
