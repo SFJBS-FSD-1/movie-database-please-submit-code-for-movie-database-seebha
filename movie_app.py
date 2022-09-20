@@ -104,7 +104,7 @@ class all_movies(Resource):
         movie_list=[]
         for i in data:
             movie_list.append({"title":i.title,"year":i.year,"genre":i.genre})
-        return jsonify(movie_list)
+        return (movie_list)
 
 
 
