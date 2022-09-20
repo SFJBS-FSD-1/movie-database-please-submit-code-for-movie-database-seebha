@@ -60,7 +60,6 @@ class movie(db.Model):
 
     @staticmethod
     def get_movies():
-         #mov=movie.query.all().first()
          return (movie.query.all())
 
 
@@ -115,6 +114,7 @@ class one_movie(Resource):
         if data!=None:
             res = []
             res.append({"id":data.id,"title": data.title, "year": data.year, "genre": data.genre})
+            print(res)
             return jsonify((res),HTTPStatus.OK)
         else:
             return {'measage':"No Id found","status":HTTPStatus.NOT_FOUND}
