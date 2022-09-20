@@ -91,7 +91,7 @@ class all_movies(Resource):
         print(data)
         # for i in data:
         #     print(i.title)
-        movie_list=[]
+        movie_list=["empty"]
         for i in data:
             movie_list.append({"title":i.title,"year":i.year,"genre":i.genre})
         return (movie_list)
