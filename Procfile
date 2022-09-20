@@ -1,2 +1,2 @@
-release: flask --app flask_sql.py db upgrade
-web: gunicorn flask_sql:app
+release: flask --app movie_app.py db upgrade
+web: gunicorn movie_app:app
