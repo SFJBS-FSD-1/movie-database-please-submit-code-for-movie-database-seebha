@@ -1,5 +1,5 @@
 import os
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 from flask_restful import Api,Resource
 from flask_sqlalchemy import SQLAlchemy
 from http import HTTPStatus
@@ -144,9 +144,9 @@ class one_movie(Resource):
             return {'message':"No such ID",'status':HTTPStatus.NOT_FOUND}
 
 
-
-
-
+@app.route("/")
+def home_page():
+    return render_template("home.html")
 
 
 
