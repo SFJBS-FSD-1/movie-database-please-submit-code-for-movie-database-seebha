@@ -93,7 +93,7 @@ class all_movies(Resource):
         #     print(i.title)
         movie_list=[]
         for i in data:
-            movie_list.append({"title":i.title,"year":i.year,"genre":i.genre})
+            movie_list.append({"title":i.title,"id":i.id,"year":i.year,"genre":i.genre})
         return jsonify(movie_list)
 
 
